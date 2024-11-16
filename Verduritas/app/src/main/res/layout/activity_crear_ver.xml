@@ -24,6 +24,8 @@
             android:id="@+id/alias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:ems="10"
             android:hint="Alias" />
 
@@ -31,8 +33,10 @@
             android:id="@+id/fecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:ems="10"
-            android:hint="Fecha de siembra"
+            android:hint="Fecha de siembra (dd/mm/yyyy)"
             android:inputType="date" />
 
         <Spinner
@@ -40,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="68dp"
             android:layout_marginBottom="16dp"
+            android:textColor="@color/black"
             android:minHeight="48dp"
             android:prompt="@string/select_cultivo"
             android:spinnerMode="dropdown"
@@ -48,7 +53,8 @@
         <TextView
             android:id="@+id/mensaje"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
 
 
         <Button

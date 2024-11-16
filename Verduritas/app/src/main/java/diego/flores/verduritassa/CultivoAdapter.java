@@ -36,7 +36,7 @@ public class CultivoAdapter extends RecyclerView.Adapter<CultivoAdapter.CultivoV
     public void onBindViewHolder(@NonNull CultivoViewHolder holder, int position) {
         Verduras cultivo = cultivosList.get(position);
         holder.aliasText.setText(cultivo.getAlias());
-        holder.fechaText.setText(cultivo.getFecha());
+        holder.fechaText.setText(cultivo.getCalcFecha());
 
         holder.menuButton.setOnClickListener(v ->
                 listener.onMenuClick(holder.menuButton, holder.getAdapterPosition())

@@ -27,7 +27,9 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#000000"
             android:ems="10"
+            android:textColor="@color/black"
             android:hint="Email"
+            android:textColorHint="@color/black"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -35,12 +37,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#000000"
+            android:textColor="@color/black"
             android:ems="10"
+            android:textColorHint="@color/black"
             android:hint="Password"
             android:inputType="textPassword" />
 
         <TextView
             android:id="@+id/mensaje"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

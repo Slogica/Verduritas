@@ -25,7 +25,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Email"
+            android:textColorHint="@color/black"
             android:backgroundTint="@color/black"
+            android:textColor="@color/black"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -34,7 +36,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nombre"
+            android:textColorHint="@color/black"
             android:backgroundTint="@color/black"
+            android:textColor="@color/black"
             android:inputType="textPersonName" />
 
         <EditText
@@ -43,28 +47,35 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:backgroundTint="@color/black"
-            android:hint="País" />/>
+            android:textColor="@color/black"
+            android:hint="País"
+            android:textColorHint="@color/black"/>
 
         <EditText
             android:id="@+id/genero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
+            android:textColor="@color/black"
             android:ems="10"
-            android:hint="Genero" />
+            android:hint="Genero"
+            android:textColorHint="@color/black"/>
 
         <EditText
             android:id="@+id/pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
+            android:textColor="@color/black"
             android:ems="10"
             android:hint="Password"
+            android:textColorHint="@color/black"
             android:inputType="textPassword" />
 
         <TextView
             android:id="@+id/mensaje"
             android:layout_width="match_parent"
+            android:textColor="@color/black"
             android:layout_height="wrap_content" />
 
 
