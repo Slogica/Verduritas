@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomButtonStyle">
+        <item name="android:background">@color/C</item> <!-- Aplica el color del fondo -->
+        <item name="android:textColor">@android:color/white</item> <!-- Cambia el color del texto, si es necesario -->
+    </style>
+</resources>

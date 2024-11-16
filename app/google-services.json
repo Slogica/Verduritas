@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "254607292803",
+    "project_id": "verduritas-sa-diegoflores",
+    "storage_bucket": "verduritas-sa-diegoflores.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254607292803:android:ff0399a138cf77c3f81eb6",
+        "android_client_info": {
+          "package_name": "diego.flores.verduritassa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254607292803-iqnra8aoei995nfpcm0blr2l0csr4ig5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8z4XoXDFns1J-Q43h4ec8su1rVjgUmjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254607292803-iqnra8aoei995nfpcm0blr2l0csr4ig5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

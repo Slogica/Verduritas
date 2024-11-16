@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/A"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="347dp"
+        android:layout_height="278dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginEnd="124dp"
+        android:orientation="vertical"
+        android:translationY="-30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/alias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Alias" />
+
+        <EditText
+            android:id="@+id/fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Fecha de siembra"
+            android:inputType="date" />
+
+        <Spinner
+            android:id="@+id/spinnerCultivo"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            android:prompt="@string/select_cultivo"
+            android:spinnerMode="dropdown"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/crear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/D"
+            android:text="Crear" />
+
+        <Button
+            android:id="@+id/volver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/C"
+            android:text="Volver" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
