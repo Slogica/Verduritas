@@ -19,3 +19,8 @@ Aplicación Android para gestionar cultivos orgánicos, desarrollada con Java y 
 
 1. Abre el proyecto en Android Studio
 2. Ejecuta la app en un dispositivo o emulador
+
+## Login
+
+1. Loguee con las credenciales: clases.inacap.mafer@gmail.com y password inacap2024
+2. Pulse el botón "Iniciar sesión"
