@@ -41,7 +41,7 @@ public class EditarVerActivity extends AppCompatActivity {
         dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.cultivos_array, android.R.layout.simple_spinner_item);
+                R.array.Tipos_de_cultivos, android.R.layout.simple_spinner_item);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -83,7 +83,7 @@ public class EditarVerActivity extends AppCompatActivity {
     }
 
     private int getSpinnerPosition(String planta) {
-        String[] cultivos = getResources().getStringArray(R.array.cultivos_array);
+        String[] cultivos = getResources().getStringArray(R.array.Tipos_de_cultivos);
         for (int i = 0; i < cultivos.length; i++) {
             if (cultivos[i].equalsIgnoreCase(planta)) {
                 return i;

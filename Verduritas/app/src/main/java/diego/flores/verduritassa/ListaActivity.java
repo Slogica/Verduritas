@@ -73,7 +73,10 @@ public class ListaActivity extends AppCompatActivity {
     }
 
     private void loadCultivos() {
+        String currentUserId = mAuth.getCurrentUser().getUid();
+
         db.collection("Verduras")
+                .whereEqualTo("userId", currentUserId)
                 .get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
                     cultivosList.clear();  // Limpia la lista para evitar duplicados

@@ -5,16 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/A"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="347dp"
-        android:layout_height="278dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginEnd="124dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="125dp"
         android:orientation="vertical"
-        android:translationY="-30dp"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,53 +23,40 @@
             android:id="@+id/alias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:ems="10"
             android:hint="Alias" />
 
         <EditText
             android:id="@+id/fecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:ems="10"
-            android:hint="Fecha de siembra (dd/mm/yyyy)"
+            android:hint="@string/hint_date"
             android:inputType="date" />
 
         <Spinner
             android:id="@+id/spinnerCultivo"
             android:layout_width="match_parent"
-            android:layout_height="68dp"
-            android:layout_marginBottom="16dp"
-            android:textColor="@color/black"
-            android:minHeight="48dp"
-            android:prompt="@string/select_cultivo"
-            android:spinnerMode="dropdown"
-            android:textSize="25sp" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/Tipos_de_cultivos" />
 
         <TextView
             android:id="@+id/mensaje"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
+            android:layout_height="wrap_content" />
 
 
         <Button
             android:id="@+id/crear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/D"
-            android:text="Crear" />
+            android:layout_marginTop="16dp"
+            android:text="@string/button_next" />
 
         <Button
             android:id="@+id/volver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/C"
+            android:layout_marginTop="16dp"
             android:text="Volver" />
 
     </LinearLayout>

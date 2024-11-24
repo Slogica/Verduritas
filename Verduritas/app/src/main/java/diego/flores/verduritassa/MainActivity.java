@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText email;
     EditText pass;
+    private TextView registerTextView;
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
     TextView mensaje;
@@ -63,12 +64,8 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         pass = findViewById(R.id.pass);
         mensaje = findViewById(R.id.ingresar);
+        registerTextView = findViewById(R.id.registerTextView);
 
-        Button registrar = findViewById(R.id.registrar);
-        registrar.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
-            startActivity(intent);
-        });
 
         Button ingresar = findViewById(R.id.ingresar);
         ingresar.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +81,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 signInWithGoogle();
             }
+        });
+
+        registerTextView.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
     }
 

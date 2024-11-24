@@ -9,6 +9,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.ParseException;
@@ -25,6 +27,7 @@ public class CrearVerActivity extends AppCompatActivity {
     private Spinner spinnerCultivo;
     private Button crear;
     private FirebaseFirestore db;
+    private FirebaseAuth auth;
     private SimpleDateFormat dateFormat;
 
     @Override
@@ -39,13 +42,14 @@ public class CrearVerActivity extends AppCompatActivity {
         dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.cultivos_array, android.R.layout.simple_spinner_item);
+                R.array.Tipos_de_cultivos, android.R.layout.simple_spinner_item);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinnerCultivo.setAdapter(adapter);
 
         db = FirebaseFirestore.getInstance();
+        auth = FirebaseAuth.getInstance();
 
         crear.setOnClickListener(view -> guardar());
 
@@ -102,13 +106,16 @@ public class CrearVerActivity extends AppCompatActivity {
             Toast.makeText(this, "Error en el formato de fecha", Toast.LENGTH_SHORT).show();
         }
 
-        Verduras verdura = new Verduras(aliasText, fechaText, fechaCosecha, cultivoSeleccionado);
+        String userId = auth.getCurrentUser().getUid();
+
+        Verduras verdura = new Verduras(aliasText, fechaText, fechaCosecha, cultivoSeleccionado, userId);
 
         Map<String, Object> verduras = new HashMap<>();
         verduras.put("alias", verdura.getAlias());
         verduras.put("fecha", verdura.getFecha());
         verduras.put("calcFecha", verdura.getCalcFecha());
         verduras.put("planta", verdura.getPlanta());
+        verduras.put("userId", verdura.getUserId());
 
         db.collection("Verduras")
                 .add(verduras)
